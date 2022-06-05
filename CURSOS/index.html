@@ -16,10 +16,17 @@
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script>
-    // setup 
-    const data = {
-      labels: ["Curso em Vídeo: Python","Curso em Vídeo: JavaScript","DIO: Spread Fullstack Developer", "DIO: Órbi Web Games Developer"],
+    // config 
+    Chart.register(ChartDataLabels);
+    const config = {
+      type: 'doughnut',
+      data: {
+        labels: ["Curso em Vídeo: Python","Curso em Vídeo: JavaScript","DIO: Spread Fullstack Developer", "DIO: Órbi Web Games Developer"],
       datasets: [{
         label: 'Weekly Sales',
         data: [120,40,98,63],
@@ -44,14 +51,18 @@
         borderWidth: 4,
         borderRadius: 10,
       }]
-    };
-
-    // config 
-    const config = {
-      type: 'doughnut',
-      data,
+      },
       options: {
         plugins: {
+          datalabels: {
+            display: true,
+            align: "center",
+            color: "black",
+            borderRadius: 3,
+            font: {
+              size: 50,
+            }
+          },
           legend: {
             position: "bottom",
             labels: {
