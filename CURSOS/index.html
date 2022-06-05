@@ -19,10 +19,10 @@
     <script>
     // setup 
     const data = {
-      labels: ["Curso em Vídeo: Python", "DIO: Spread Fullstack Developer", "DIO: Órbi Web Games Developer","Curso em Vídeo: JavaScript"],
+      labels: ["Curso em Vídeo: Python","Curso em Vídeo: JavaScript","DIO: Spread Fullstack Developer", "DIO: Órbi Web Games Developer"],
       datasets: [{
         label: 'Weekly Sales',
-        data: [120,98,63,40],
+        data: [120,40,98,63],
         backgroundColor: [
           'rgba(255, 26, 104, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -52,6 +52,16 @@
       data,
       options: {
         plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              font: {
+                size: 18,
+                family: 'Helvetica Neue',
+                weight: "bolder",
+              }
+            },
+          },
           title: {
             display: true,
             padding: 10,
@@ -59,7 +69,7 @@
               size: 30,
               family: 'Helvetica Neue'
             },
-            text: "CURSOS QUE REALIZEI (em horas)",
+            text: "CURSOS REALIZADOS",
             color: "black",
           }
         }
