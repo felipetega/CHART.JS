@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChartJS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>CHART.JS</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script src="chartjs-plugin-doughnutlabel.js"></script>
+
+    <script>
+    // config 
+    Chart.register(ChartDataLabels);
+      const myDoughnutChart = {
+  type: 'doughnut',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May'],
+    datasets: [{
+      data: [50, 60, 70, 180, 190]
+    }]
+  },
+  options: {
+    plugins: {
+      datalabels: {
+        display: true,
+        backgroundColor: '#ccc',
+        borderRadius: 3,
+        font: {
+          color: 'red',
+          weight: 'bold',
+        }
+      },
+      doughnutlabel: {
+        labels: [{
+          text: '550',
+          font: {
+            size: 20,
+            weight: 'bold'
+          }
+        }, {
+          text: 'total'
+        }]
+      }
+    }
+  }
+}
+var getTotal = function(myDoughnutChart) {
+	var sum = myDoughnutChart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+	return `Total: ${sum}`;
+}
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      myDoughnutChart
+    );
+    </script>
+
+  </body>
+</html>

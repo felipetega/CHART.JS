@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChartJS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>CHART.JS</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+    // config 
+    Chart.register(ChartDataLabels);
+    const config = {
+      type: 'doughnut',
+      data: {
+        labels: ["Curso em Vídeo: Python","Curso em Vídeo: JavaScript","DIO: Spread Fullstack Developer", "DIO: Órbi Web Games Developer"],
+      datasets: [{
+        //label: 'Weekly Sales',
+        data: [120,40,98,63],
+        backgroundColor: [
+          'rgba(255, 26, 104, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(0, 0, 0, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 4,
+        borderRadius: 10,
+      }]
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            display: true,
+            align: "center",
+            color: "black",
+            borderRadius: 3,
+            font: {
+              size: 50,
+            }
+          },
+          legend: {
+            position: "bottom",
+            labels: {
+              font: {
+                size: 18,
+                family: 'Helvetica Neue',
+                weight: "bolder",
+              }
+            },
+          },
+          title: {
+            display: true,
+            padding: 10,
+            font: {
+              size: 30,
+              family: 'Helvetica Neue'
+            },
+            text: "CURSOS REALIZADOS",
+            color: "black",
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    </script>
+
+  </body>
+</html>
