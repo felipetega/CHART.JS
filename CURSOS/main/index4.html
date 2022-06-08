@@ -24,47 +24,52 @@
     <script>
     // config 
     Chart.register(ChartDataLabels);
-      const myDoughnutChart = {
+      // quickchart-js https://github.com/typpo/quickchart-js
+
+const QuickChart = require('quickchart-js');
+
+const chart = new QuickChart();
+
+chart.setWidth(500)
+chart.setHeight(300);
+
+chart.setConfig({
   type: 'doughnut',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May'],
+    labels: ['Curso em Vídeo: Python', 'Curso em Vídeo: JavaScript', 'DIO: Spread Fullstack Developer', 'DIO: Órbi Web Games Developer'],
     datasets: [{
-      data: [50, 60, 70, 180, 190]
+      data: [120, 40, 98, 63]
     }]
   },
   options: {
     plugins: {
       datalabels: {
         display: true,
-        backgroundColor: '#ccc',
+        backgroundColor: 'white',
         borderRadius: 3,
         font: {
-          color: 'red',
+          color: 'black',
           weight: 'bold',
         }
       },
       doughnutlabel: {
         labels: [{
-          text: '550',
+          text: '321',
           font: {
-            size: 20,
+            size: 25,
             weight: 'bold'
           }
         }, {
-          text: 'total'
+          text: 'horas totais'
         }]
       }
     }
   }
-}
-var getTotal = function(myDoughnutChart) {
-	var sum = myDoughnutChart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
-	return `Total: ${sum}`;
-}
+});
     // render init block
     const myChart = new Chart(
       document.getElementById('myChart'),
-      myDoughnutChart
+      chart
     );
     </script>
 

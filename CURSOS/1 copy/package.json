@@ -31,5 +31,8 @@
   },
   "peerDependencies": {
     "chart.js": ">= 2.7.0 < 3"
+  },
+  "dependencies": {
+    "quickchart-js": "^3.0.1"
   }
 }
