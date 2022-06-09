@@ -5,7 +5,7 @@ var getTotal = function(myChart) {
 	var sum = myChart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
 	return `Total: ${sum}`;
 }
-Chart.register(ChartDataLabels);
+//Chart.register(ChartDataLabels); //
 // Doughnut with one line of text in the center
 ctx = document.getElementById('chart').getContext('2d');
 var myChart3 = new Chart(ctx, {

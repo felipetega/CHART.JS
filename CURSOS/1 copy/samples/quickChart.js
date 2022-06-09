@@ -35,23 +35,22 @@ getTotal = function(myChart) {
         font: {
           color: 'black',
           weight: 'bold',
-          size: 15,
         }
       },
       doughnutlabel: {
         labels: [{
           text: getTotal,
           font: {
-            size: 22,
+            size: 23,
             weight: 'bold'
           }
         }, {
           text: 'horas',
           font: {
-            size: 19,
+            size: 20,
           }
         }]
-      },
+      }
     }
   }
 });
@@ -59,7 +58,8 @@ getTotal = function(myChart) {
 // Print the chart URL
 console.log(chart.getUrl());
 
-
+// Get the image...
+const image = await chart.toBinary();
 
 // Or write it to a file
 chart.toFile('chart.png');
