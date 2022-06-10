@@ -25,11 +25,16 @@ var myChart3 = new Chart(ctx, {
 		legend: {
 			display: true,
 			position: 'bottom',
+			labels:{
+				fontColor: 'black',
+				fontSize: 15,
+			}
 		},
 		title: {
 			display: true,
-			fontSize: 30,
-			padding: 10,
+			fontSize: 50,
+			fontColor: "black",
+			fontStyle: "bold",
 			text: 'Cursos realizados',
 		},
 		animation: {
@@ -37,26 +42,17 @@ var myChart3 = new Chart(ctx, {
 			animateRotate: true
 		},
 		plugins: {
-			datalabels: {
-        display: true,
-        align: "center",
-        color: "black",
-        borderRadius: 3,
-        font: {
-          size: 50,
-        }
-      },
 			doughnutlabel: {
 				labels: [
 					{
 						text: getTotal,
+						color: 'black',
 						font: {
 							size: '90',
 							family: 'Arial, Helvetica, sans-serif',
 							style: 'italic',
 							weight: 'bold'
 						},
-						color: 'black'
 					}
 				]
 			}

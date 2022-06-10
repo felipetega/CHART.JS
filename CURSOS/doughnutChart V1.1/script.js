@@ -32,7 +32,7 @@ var myDoughnutChart = {
           font: {
             size: 18,
             family: 'Helvetica Neue',
-            weight: "bolder",
+            weight: "bold",
           }
         },
       },
@@ -48,7 +48,7 @@ var myDoughnutChart = {
           },
       subtitle: {
         display: true,
-        text: `${getTotal}`,
+        text: `Total: 321 horas`,
         padding: 10,
         font: {
           size: 30,
