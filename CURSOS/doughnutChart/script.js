@@ -4,11 +4,28 @@ const BORDER_COLORS = ['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255
 
 //DATA
 var data=[120,40,98,63]
+
 //SUM DATA VALUES
+var getTotal = ()=>{sum=data.reduce((a, b) => a + b, 0);return (`Total: ${sum} horas`)}
 
-var getTotal = ()=>{sum=data.reduce((a, b) => a + b, 0);return (`Total de horas: ${sum}`)}
+//RESPONSIVE FONTS
+function responsiveFonts(){
+  if(window.outerWidth>=1500){
+    Chart.defaults.font.size = 22
+  }else if(window.outerWidth>=1200 && window.outerWidth<1500){
+    Chart.defaults.font.size = 19
+  }else if(window.outerWidth>=900 && window.outerWidth<1200){
+    Chart.defaults.font.size = 16
+  }else if(window.outerWidth>=700 && window.outerWidth<900){
+    Chart.defaults.font.size = 13
+  }else if(window.outerWidth<700){
+    Chart.defaults.font.size = 10
+  }
+  console.log(window.outerWidth)
+}
+
 //CHART
-
+responsiveFonts()
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'doughnut',
@@ -30,21 +47,21 @@ const myChart = new Chart(ctx, {
             display: true,
             text: 'Cursos Realizados',
             font: {
-              size:50,
+              //size:50,
             }
         },
         subtitle: {
           display: true,
           text: getTotal,
           font:{
-            size: 25
+            //size: 25
           }
       },
         legend: {
           position: "bottom",
           labels: {
             font: {
-                size: 20,
+                //size: 20,
                 weight: "bolder",
             }
           }
