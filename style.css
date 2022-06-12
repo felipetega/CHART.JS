@@ -8,14 +8,16 @@ body{
 }
 .chartMenu {
   width: 100vw;
-  height: 40px;
+  height: 70px;
   background: #1A1A1A;
   color: lightblue;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 .chartMenu p {
-  padding: 10px;
-  /*font-size: 20px;*/
+  padding: 25px;
+  font-size: 20px;
 }
 .chartCard {
   width: 100%;
@@ -29,5 +31,5 @@ body{
   padding: 20px;
   border-radius: 20px;
   border: solid 3px black;
-  background: white;
+  background-color: lightcyan;
 }
