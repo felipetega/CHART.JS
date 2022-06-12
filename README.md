@@ -1,2 +1,5 @@
-# CHART.JS
- Lib para gráficos em JavaScript
+# [Cursos Realizados - CHART.JS](https://felipetega.github.io/CursosRealizados-CHART.JS/)
+
+## O que é ChartJS?
+
+É uma biblioteca para criação de gráficos em JavaScript simples e flexíveis, para designers e desenvolvedores!
