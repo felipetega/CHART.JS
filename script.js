@@ -21,7 +21,8 @@ function responsiveFonts(){
   }else if(window.outerWidth<700){
     Chart.defaults.font.size = 11
   }
-  console.log(window.outerWidth)
+  //console.log(window.outerWidth)
+  myChart.update()
 }
 
 //CHART
