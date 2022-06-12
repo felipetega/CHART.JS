@@ -11,18 +11,17 @@ var getTotal = ()=>{sum=data.reduce((a, b) => a + b, 0);return (`Total: ${sum} h
 //RESPONSIVE FONTS
 function responsiveFonts(){
   if(window.outerWidth>=1500){
-    Chart.defaults.font.size = 19
+    Chart.defaults.font.size = 18
   }else if(window.outerWidth>=1200 && window.outerWidth<1500){
-    Chart.defaults.font.size = 17
+    Chart.defaults.font.size = 16
   }else if(window.outerWidth>=900 && window.outerWidth<1200){
-    Chart.defaults.font.size = 15
+    Chart.defaults.font.size = 14
   }else if(window.outerWidth>=700 && window.outerWidth<900){
-    Chart.defaults.font.size = 13
+    Chart.defaults.font.size = 12
   }else if(window.outerWidth<700){
-    Chart.defaults.font.size = 11
+    Chart.defaults.font.size = 10
   }
   //console.log(window.outerWidth)
-  myChart.update()
 }
 
 //CHART
