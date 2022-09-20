@@ -1,4 +1,5 @@
 # [Cursos Realizados - CHART.JS](https://felipetega.github.io/CursosRealizados-CHART.JS/)
+[clique aqui](https://felipetega.github.io/CursosRealizados-CHART.JS/)
 
 ## O que é ChartJS?
 
